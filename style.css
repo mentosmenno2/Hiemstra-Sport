@@ -1,0 +1,250 @@
+body {
+	background-color: red;
+	margin: 0 auto;
+	padding: 0px;
+	font-family: Arial;
+	width: 900px;
+	height: 100%;
+	font-size: 16px;
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+	width: 12px;
+	background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+	border: 2px solid black;
+    -webkit-border-radius: 6px;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #red;
+}
+
+header {
+	width: 100%;
+}
+
+table{
+	width: 100%;
+	overflow: scroll; /* Scrollbar are always visible */
+	overflow: auto;   /* Scrollbar is displayed as it's needed */
+}
+
+input[type=text], input[type=email], input[type=password], input[type=tel]{
+	border-radius: 5px;
+	width: 200px;
+	font-size: 16px;
+}
+
+th {
+	text-align: left;
+}
+
+textarea {
+	width: 100%;
+	height: 250px;
+}
+
+h1 {
+	font-weight: 900;
+	color: red;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+iframe {
+	max-width: 100%;
+}
+
+.content {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border-radius: 20px;
+	width: 100%;
+	background-color: white;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.menu {
+	background-color: red;
+	list-style-type: none;
+	max-width: 1000px;
+	width: 100%;
+	font-size: 14px;
+	text-align: center;
+	padding: 0px;
+	font-weight: 900;
+	margin: 0 auto;
+	border: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.menu > a {
+	display: inline-block;
+	background-color: red;
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	line-height: 20px;
+	vertical-align: middle
+}
+
+.menu > a:hover {
+	background-color: white;
+	color: red;
+	font-size: 20px;
+}
+
+.menu > a:active {
+	color: black;
+}
+
+.homepagephotos {
+	width: 300px;
+}
+
+.show-menu {
+	font-weight: 900;
+	font-size: 24px;
+	text-decoration: none;
+	color: red;
+	background: white;
+	text-align: center;
+	padding: 5px;
+	border: 5px outset white;
+	display: none;
+	border-radius: 20px;
+	margin-top: 5px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.show-menu:active {
+	border: 5px inset white;
+}
+
+#logodiv {
+	width: 100%;
+	border-radius: 0px 0px 20px 20px;
+	background-color: white;
+	padding: 10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#logo {
+	display: block;
+	width: 600px;
+	margin: 0 auto;
+}
+
+#adminmenu {
+	background-color: blue;
+	border-radius: 20px;
+}
+
+#adminmenu > a {
+	display: inline-block;
+	background-color: blue;
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+}
+
+#adminmenu > a:hover {
+	background-color: white;
+	color: blue;
+}
+
+#homepagephotos {
+	text-align: center;
+	magin-top: 100px;
+}
+
+#show-menu {
+    display: none;
+}
+
+
+
+#menuicon {
+	width: 20px;
+}
+
+@media screen and (max-width: 950px){
+    body {
+		width: 95%;
+	}
+	
+	.content {
+		margin-top: 5px;
+	}
+	
+	.show-menu {
+		display:block;
+	}
+	
+	#logo {
+		max-width: 600px;
+		width: 100%;
+	}
+	
+	.menu {
+		border-top: 0px solid white;
+		border-right: 5px solid white;
+		border-bottom: 0px solid white;
+		border-left: 5px solid white;
+		border-radius: 20px;
+		overflow: hidden;
+		max-height: 0px;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		transition: all 0.5s;
+	}
+	
+	.menu > a {
+		display: block;
+		border-radius: 15px;
+		width: 100%;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+
+	.menu > a:hover {
+		background-color: white;
+		color: red;
+	}
+	
+	#show-menu:checked ~ #menu {
+		display: block;
+		max-height: 400px;
+		border: 5px solid white;
+	}
+
+#show-menu:checked ~ #adminmenu {
+		display: block;
+		max-height: 400px;
+		border: 5px solid white;
+	}
+	
+}
